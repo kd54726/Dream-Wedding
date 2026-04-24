@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Wedding | Royal Wedding Planner & Luxury Events</title>
+    <meta name="description"
+        content="Dream Wedding specializes in creating grand, majestic, and royal wedding celebrations. Experience the pinnacle of event planning with our bespoke services.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'royal-dark': '#0c1410',
+                        'royal-gold': '#c5a059',
+                        'royal-cream': '#f2f3cc',
+                        'royal-accent-green': '#1a2e24',
+                        'royal-accent-brown': '#2a2418',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="selection:bg-royal-gold/30 bg-royal-dark text-royal-cream overflow-x-hidden min-h-screen">
+
+    <!-- Background Ornaments -->
+    <div
+        class="fixed top-[-100px] left-[-100px] w-[500px] h-[500px] rounded-full bg-royal-accent-green blur-[120px] opacity-40 z-[-1]">
+    </div>
+    <div
+        class="fixed bottom-[-50px] right-[-50px] w-[400px] h-[400px] rounded-full bg-royal-accent-brown blur-[100px] opacity-30 z-[-1]">
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-6">
+        <div
+            class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm tracking-widest uppercase font-medium">
+            <div class="flex items-center gap-2 text-royal-cream animate-on-scroll fade-in-left-small">
+                <i data-lucide="crown" class="w-5 h-5 text-royal-gold"></i>
+                <span class="text-xl tracking-[0.2em] font-light uppercase border-b border-gold pb-1">
+                    Dream <span class="text-royal-gold">Wedding</span>
+                </span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div id="desktop-nav"
+                class="hidden md:flex gap-10 items-center text-[11px] tracking-[0.3em] font-sans text-royal-cream/90">
+                <a href="#services" class="hover:text-royal-gold transition-colors duration-300">Services</a>
+                <a href="#portfolio" class="hover:text-royal-gold transition-colors duration-300">Portfolio</a>
+                <a href="#about" class="hover:text-royal-gold transition-colors duration-300">About</a>
+                <a href="#contact" class="hover:text-royal-gold transition-colors duration-300">Contact</a>
+                <button id="reservations-btn"
+                    class="glass-card text-royal-cream px-8 py-3 rounded-full hover:bg-royal-gold hover:text-white transition-all duration-500 transform hover:scale-105 border border-white/10 uppercase text-[11px] tracking-[0.3em]">
+                    <span class="pl-[0.3em]">Reservations</span>
+                </button>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-open" class="md:hidden text-royal-cream">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-royal-dark z-[100] p-10 flex flex-col hidden opacity-0 translate-x-full transition-all duration-500">
+        <button id="mobile-menu-close" class="self-end text-royal-cream">
+            <i data-lucide="x" class="w-8 h-8 text-royal-gold"></i>
+        </button>
+        <div class="flex flex-col gap-8 text-3xl font-serif text-royal-cream mt-10">
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="mt-auto flex gap-6 text-royal-cream/50">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+            <i data-lucide="facebook" class="w-6 h-6"></i>
+            <i data-lucide="twitter" class="w-6 h-6"></i>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070"
+                    alt="Grand Wedding Hall" class="w-full h-full object-cover grayscale-[20%] opacity-50"
+                    referrerpolicy="no-referrer">
+                <div class="absolute inset-0 bg-royal-dark/60"></div>
+            </div>
+
+            <div class="relative z-10 text-center px-6">
+                <div class="animate-on-scroll fade-in-up">
+                    <span
+                        class="uppercase text-[12px] tracking-[0.5em] pl-[0.5em] text-royal-gold mb-6 block font-sans">Crafting
+                        Royal Legacies</span>
+                    <h1 class="text-7xl md:text-[110px] leading-[0.9] font-normal mb-10 max-w-5xl mx-auto">
+                        Grandeur <br>
+                        <span class="italic text-royal-gold ml-0 md:ml-12">Reimagined</span>
+                    </h1>
+                    <p
+                        class="max-w-lg mx-auto text-sm md:text-[15px] leading-relaxed opacity-70 font-sans tracking-wide mb-12">
+                        Bespoke wedding orchestration for those who seek the extraordinary. From palace galas to
+                        intimate estate ceremonies, we refine every detail of your royal beginning.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                        <button
+                            class="bg-royal-gold text-royal-dark px-10 py-5 rounded-full text-[12px] uppercase tracking-[0.2em] font-bold hover:bg-royal-cream transition-all duration-500 shadow-xl shadow-royal-gold/10 flex items-center gap-3">
+                            Begin Your Journey <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 w-full flex justify-center z-20">
+                <div class="text-royal-cream/50 flex flex-col items-center gap-2 animate-on-scroll fade-in delay-1000">
+                    <span class="text-[10px] uppercase tracking-[0.3em] pl-[0.3em]">Scroll</span>
+                    <div class="w-px h-12 bg-gradient-to-b from-royal-gold to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="about" class="py-24 bg-transparent border-y border-white/5 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+                <div class="relative animate-on-scroll fade-in-left">
+                    <div class="aspect-[3/4] rounded-t-[200px] overflow-hidden shadow-2xl relative z-10 glass-card p-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1976"
+                            alt="Expert Planner" class="w-full h-full object-cover rounded-t-[180px] grayscale"
+                            referrerpolicy="no-referrer">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-royal-gold rounded-full z-0 opacity-5 blur-3xl">
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll fade-in-right">
+                    <span class="text-royal-gold text-[12px] uppercase tracking-[0.5em] font-sans block mb-6">The
+                        Experience</span>
+                    <h3 class="text-4xl md:text-5xl font-serif mb-8 text-royal-cream leading-tight">
+                        Where Grandeur Meets <br><span class="italic text-royal-gold opacity-80">Impeccable
+                            Precision</span>
+                    </h3>
+                    <p class="text-royal-cream/70 text-lg mb-8 leading-relaxed font-sans">
+                        At Dream Wedding, we believe every love story deserves a throne. We don't just plan events; we
+                        orchestrate masterpieces of romance, legacy, and splendor. Our mission is to transform your
+                        vision into a royal reality that resonates for a lifetime.
+                    </p>
+                    <ul class="space-y-4 mb-10 text-royal-cream/80">
+                        <li class="flex items-center gap-3 font-sans text-sm tracking-wide">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-royal-gold"></i>
+                            <span>Accredited Royal Event Specialists</span>
+                        </li>
+                        <li class="flex items-center gap-3 font-sans text-sm tracking-wide">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-royal-gold"></i>
+                            <span>Exclusive Access to Palace Venues</span>
+                        </li>
+                        <li class="flex items-center gap-3 font-sans text-sm tracking-wide">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-royal-gold"></i>
+                            <span>World-Class Vendor Network</span>
+                        </li>
+                        <li class="flex items-center gap-3 font-sans text-sm tracking-wide">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-royal-gold"></i>
+                            <span>Unparalleled Attention to Detail</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="inline-flex items-center gap-2 group font-serif text-xl border-b-2 border-gold pb-1 text-royal-cream">
+                        Our Story <i data-lucide="chevron-right"
+                            class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20">
+                    <span class="text-royal-gold text-[12px] uppercase tracking-[0.5em] font-sans block mb-6">Curated
+                        Services</span>
+                    <h3 class="text-4xl md:text-5xl font-serif text-royal-cream">Tailored to Perfection</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div
+                        class="group p-10 glass-card glass-card-hover rounded-2xl flex flex-col justify-between h-full animate-on-scroll fade-in-up delay-100">
+                        <div>
+                            <div class="w-8 h-[1px] bg-royal-gold mb-6 group-hover:w-16 transition-all duration-500">
+                            </div>
+                            <div class="mb-4 text-royal-cream"><i data-lucide="crown" class="w-8 h-8"></i></div>
+                            <h4 class="text-lg font-light tracking-widest mb-6 uppercase text-royal-cream">Full Wedding
+                                Planning</h4>
+                            <p class="text-[13px] text-royal-cream/60 leading-relaxed font-sans">
+                                Our comprehensive signature service, managing every detail from the very first concept
+                                to the final farewell.
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <span
+                                class="text-[10px] uppercase tracking-[0.2em] text-royal-gold font-sans font-bold group-hover:text-white transition-colors">
+                                Exploration
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="group p-10 glass-card glass-card-hover rounded-2xl flex flex-col justify-between h-full animate-on-scroll fade-in-up delay-200">
+                        <div>
+                            <div class="w-8 h-[1px] bg-royal-gold mb-6 group-hover:w-16 transition-all duration-500">
+                            </div>
+                            <div class="mb-4 text-royal-cream"><i data-lucide="sparkles" class="w-8 h-8"></i></div>
+                            <h4 class="text-lg font-light tracking-widest mb-6 uppercase text-royal-cream">Bespoke Royal
+                                Decor</h4>
+                            <p class="text-[13px] text-royal-cream/60 leading-relaxed font-sans">
+                                Transforming venues into majestic realms with custom floral installations and grand
+                                design elements.
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <span
+                                class="text-[10px] uppercase tracking-[0.2em] text-royal-gold font-sans font-bold group-hover:text-white transition-colors">
+                                Exploration
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="group p-10 glass-card glass-card-hover rounded-2xl flex flex-col justify-between h-full animate-on-scroll fade-in-up delay-300">
+                        <div>
+                            <div class="w-8 h-[1px] bg-royal-gold mb-6 group-hover:w-16 transition-all duration-500">
+                            </div>
+                            <div class="mb-4 text-royal-cream"><i data-lucide="gem" class="w-8 h-8"></i></div>
+                            <h4 class="text-lg font-light tracking-widest mb-6 uppercase text-royal-cream">Elite Event
+                                Management</h4>
+                            <p class="text-[13px] text-royal-cream/60 leading-relaxed font-sans">
+                                For the couple who has planned their day but requires professional execution for a
+                                flawless royal experience.
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <span
+                                class="text-[10px] uppercase tracking-[0.2em] text-royal-gold font-sans font-bold group-hover:text-white transition-colors">
+                                Exploration
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ceremonies Section -->
+        <section id="ceremonies" class="py-24 relative border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20 animate-on-scroll fade-in-up">
+                    <span class="text-royal-gold text-[12px] uppercase tracking-[0.5em] font-sans block mb-6">Choose the
+                        type that suits you</span>
+                    <h3 class="text-4xl md:text-5xl font-serif text-royal-cream">Ceremonies</h3>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-8">
+                    <!-- Item 1 -->
+                    <div
+                        class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] group p-6 glass-card glass-card-hover rounded-2xl flex flex-col items-center text-center animate-on-scroll fade-in-up delay-100">
+                        <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=800"
+                                alt="Symbolic ceremony"
+                                class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                        </div>
+                        <h4 class="text-xl font-serif text-royal-cream mb-4">Symbolic Ceremony</h4>
+                        <div class="w-8 h-[1px] bg-royal-gold mt-auto group-hover:w-16 transition-all duration-500">
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] group p-6 glass-card glass-card-hover rounded-2xl flex flex-col items-center text-center animate-on-scroll fade-in-up delay-200">
+                        <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800"
+                                alt="Civil wedding"
+                                class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                        </div>
+                        <h4 class="text-xl font-serif text-royal-cream mb-4">Civil Wedding</h4>
+                        <div class="w-8 h-[1px] bg-royal-gold mt-auto group-hover:w-16 transition-all duration-500">
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                        class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] group p-6 glass-card glass-card-hover rounded-2xl flex flex-col items-center text-center animate-on-scroll fade-in-up delay-300">
+                        <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1522143296900-b2c450f80fa7?q=80&w=1170"
+                                alt="Catholic wedding"
+                                class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                        </div>
+                        <h4 class="text-xl font-serif text-royal-cream mb-4">Catholic Wedding</h4>
+                        <div class="w-8 h-[1px] bg-royal-gold mt-auto group-hover:w-16 transition-all duration-500">
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div
+                        class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] group p-6 glass-card glass-card-hover rounded-2xl flex flex-col items-center text-center animate-on-scroll fade-in-up delay-100">
+                        <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1762415514475-bcc209d1ff23?q=80&w=687"
+                                alt="Orthodox wedding"
+                                class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                        </div>
+                        <h4 class="text-xl font-serif text-royal-cream mb-4">Orthodox Wedding</h4>
+                        <div class="w-8 h-[1px] bg-royal-gold mt-auto group-hover:w-16 transition-all duration-500">
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div
+                        class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] group p-6 glass-card glass-card-hover rounded-2xl flex flex-col items-center text-center animate-on-scroll fade-in-up delay-200">
+                        <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800"
+                                alt="Same sex wedding"
+                                class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                        </div>
+                        <h4 class="text-xl font-serif text-royal-cream mb-4">Same Sex Wedding</h4>
+                        <div class="w-8 h-[1px] bg-royal-gold mt-auto group-hover:w-16 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-24 border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div>
+                        <span class="text-royal-gold text-[12px] uppercase tracking-[0.5em] font-sans block mb-6">The
+                            Exhibition</span>
+                        <h3 class="text-4xl md:text-5xl font-serif text-royal-cream">Majestic Celebrations</h3>
+                    </div>
+                    <button
+                        class="text-royal-cream/60 hover:text-royal-gold font-sans uppercase tracking-[0.3em] text-[10px] flex items-center gap-2 transition-colors">
+                        View Entire Collection <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Portfolio 1 -->
+                    <div
+                        class="relative aspect-[3/4] overflow-hidden rounded-xl shadow-2xl glass-card group cursor-pointer hover:-translate-y-2 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=2070"
+                            alt="The Imperial Gala"
+                            class="w-full h-full object-cover grayscale opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 group-hover:opacity-100"
+                            referrerpolicy="no-referrer">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-royal-dark via-transparent to-transparent p-8 flex flex-col justify-end">
+                            <h5 class="text-white font-serif text-xl mb-1">The Imperial Gala</h5>
+                            <p
+                                class="text-royal-gold text-[10px] uppercase tracking-widest font-sans flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Grand Palace, London
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio 2 -->
+                    <div
+                        class="relative aspect-[3/4] overflow-hidden rounded-xl shadow-2xl glass-card group cursor-pointer hover:-translate-y-2 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=2069"
+                            alt="Emerald Enigma"
+                            class="w-full h-full object-cover grayscale opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 group-hover:opacity-100"
+                            referrerpolicy="no-referrer">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-royal-dark via-transparent to-transparent p-8 flex flex-col justify-end">
+                            <h5 class="text-white font-serif text-xl mb-1">Emerald Enigma</h5>
+                            <p
+                                class="text-royal-gold text-[10px] uppercase tracking-widest font-sans flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Botanical Gardens, Paris
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio 3 -->
+                    <div
+                        class="relative aspect-[3/4] overflow-hidden rounded-xl shadow-2xl glass-card group cursor-pointer hover:-translate-y-2 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1515982200576-f29f11444503?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Golden Whisper"
+                            class="w-full h-full object-cover grayscale opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 group-hover:opacity-100"
+                            referrerpolicy="no-referrer">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-royal-dark via-transparent to-transparent p-8 flex flex-col justify-end">
+                            <h5 class="text-white font-serif text-xl mb-1">Golden Whisper</h5>
+                            <p
+                                class="text-royal-gold text-[10px] uppercase tracking-widest font-sans flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Royal Hall, New York
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio 4 -->
+                    <div
+                        class="relative aspect-[3/4] overflow-hidden rounded-xl shadow-2xl glass-card group cursor-pointer hover:-translate-y-2 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=2070"
+                            alt="Pearl Pavilion"
+                            class="w-full h-full object-cover grayscale opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 group-hover:opacity-100"
+                            referrerpolicy="no-referrer">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-royal-dark via-transparent to-transparent p-8 flex flex-col justify-end">
+                            <h5 class="text-white font-serif text-xl mb-1">Pearl Pavilion</h5>
+                            <p
+                                class="text-royal-gold text-[10px] uppercase tracking-widest font-sans flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Seaside Villa, Bali
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center relative z-10">
+                <div>
+                    <div class="text-4xl md:text-5xl font-serif mb-2 text-royal-gold">50+</div>
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-50 font-sans">Palatial Venues</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-serif mb-2 text-royal-gold">12</div>
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-50 font-sans">Expert Planners</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-serif mb-2 text-royal-gold">25</div>
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-50 font-sans">Royal Accolades</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-serif mb-2 text-royal-gold">500+</div>
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-50 font-sans">Majestic Weddings</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-24 border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20 animate-on-scroll fade-in-up">
+                    <span class="text-royal-gold text-[12px] uppercase tracking-[0.5em] font-sans block mb-6">Visual
+                        Poetry</span>
+                    <h3 class="text-4xl md:text-5xl font-serif text-royal-cream">Our Gallery</h3>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                    <div class="aspect-square rounded-xl overflow-hidden animate-on-scroll fade-in-up delay-100">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600"
+                            class="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-700"
+                            alt="Gallery image 1" referrerpolicy="no-referrer">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden animate-on-scroll fade-in-up delay-200">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=600"
+                            class="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-700"
+                            alt="Gallery image 2" referrerpolicy="no-referrer">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden animate-on-scroll fade-in-up delay-300">
+                        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=687"
+                            class="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-700"
+                            alt="Gallery image 3" referrerpolicy="no-referrer">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden animate-on-scroll fade-in-up delay-100">
+                        <img src="https://images.unsplash.com/photo-1591700331354-f7eea65d1ce8?q=80&w=1170"
+                            class="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-700"
+                            alt="Gallery image 4" referrerpolicy="no-referrer">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden animate-on-scroll fade-in-up delay-200">
+                        <img src="https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?q=80&w=712"
+                            class="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-700"
+                            alt="Gallery image 5" referrerpolicy="no-referrer">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden animate-on-scroll fade-in-up delay-300">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=600"
+                            class="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-700"
+                            alt="Gallery image 6" referrerpolicy="no-referrer">
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center animate-on-scroll fade-in">
+                    <button
+                        class="inline-flex items-center gap-2 group font-serif text-xl border-b-2 border-gold pb-1 text-royal-cream hover:text-royal-gold transition-colors">
+                        Explore Full Archive <i data-lucide="chevron-right"
+                            class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-24 border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20 animate-on-scroll fade-in-up">
+                    <span class="text-royal-gold text-[12px] uppercase tracking-[0.5em] font-sans block mb-6">Words of
+                        Praise</span>
+                    <h3 class="text-4xl md:text-5xl font-serif text-royal-cream">Client Testimonials</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="p-10 glass-card rounded-2xl flex flex-col animate-on-scroll fade-in-up delay-100">
+                        <div class="flex gap-1 mb-6 text-royal-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-royal-cream/80 font-serif text-lg italic leading-relaxed mb-8 flex-grow">
+                            "The team at Dream Wedding turned our vision into a breathtaking reality. Every detail was
+                            meticulously crafted, creating an atmosphere of pure magic that we will cherish forever."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-royal-gold/30">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150"
+                                    alt="Client" class="w-full h-full object-cover grayscale">
+                            </div>
+                            <div>
+                                <h5 class="text-royal-cream font-serif text-lg">Alexander & Victoria</h5>
+                                <span class="text-royal-gold text-[10px] uppercase tracking-widest font-sans">The
+                                    Imperial Gala</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="p-10 glass-card rounded-2xl flex flex-col animate-on-scroll fade-in-up delay-200">
+                        <div class="flex gap-1 mb-6 text-royal-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-royal-cream/80 font-serif text-lg italic leading-relaxed mb-8 flex-grow">
+                            "Flawless execution from start to finish. They handled the complex logistics of our
+                            destination wedding in Paris seamlessly. We felt like royalty on our special day."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-royal-gold/30">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150"
+                                    alt="Client" class="w-full h-full object-cover grayscale">
+                            </div>
+                            <div>
+                                <h5 class="text-royal-cream font-serif text-lg">Eleanor & James</h5>
+                                <span class="text-royal-gold text-[10px] uppercase tracking-widest font-sans">Emerald
+                                    Enigma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="p-10 glass-card rounded-2xl flex flex-col animate-on-scroll fade-in-up delay-300">
+                        <div class="flex gap-1 mb-6 text-royal-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-royal-cream/80 font-serif text-lg italic leading-relaxed mb-8 flex-grow">
+                            "Their eye for design and unwavering dedication gave us the most spectacular venue
+                            transformation. It wasn't just a wedding; it was an unforgettable royal experience."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-royal-gold/30">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150"
+                                    alt="Client" class="w-full h-full object-cover grayscale">
+                            </div>
+                            <div>
+                                <h5 class="text-royal-cream font-serif text-lg">Sophia & Michael</h5>
+                                <span class="text-royal-gold text-[10px] uppercase tracking-widest font-sans">Golden
+                                    Whisper</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span
+                        class="text-royal-gold text-[12px] uppercase tracking-[0.5em] font-sans block mb-6">Reservations</span>
+                    <h3 class="text-4xl md:text-5xl font-serif text-royal-cream mb-10 leading-tight">
+                        Request a Private <br><span class="italic text-royal-gold">Consultation</span>
+                    </h3>
+                    <div class="space-y-8 text-royal-cream/60">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-royal-gold backdrop-blur-sm">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-cream font-serif text-lg tracking-wide">London HQ</p>
+                                <p class="font-sans text-sm">12 Knightsbridge, Chelsea<br>London, SW1X 7LY</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-royal-gold backdrop-blur-sm">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-cream font-serif text-lg tracking-wide">Availability</p>
+                                <p class="font-sans text-sm">Mon - Fri: 9am - 7pm<br>Sat: By Appointment Only</p>
+                            </div>
+                        </div>
+                        <div class="pt-10 flex gap-6 text-royal-cream/40">
+                            <i data-lucide="instagram"
+                                class="w-6 h-6 hover:text-royal-gold cursor-pointer transition-colors"></i>
+                            <i data-lucide="facebook"
+                                class="w-6 h-6 hover:text-royal-gold cursor-pointer transition-colors"></i>
+                            <i data-lucide="twitter"
+                                class="w-6 h-6 hover:text-royal-gold cursor-pointer transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl animate-on-scroll zoom-in">
+                    <form class="space-y-6" onsubmit="event.preventDefault()">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="firstName"
+                                    class="text-[10px] uppercase tracking-widest text-royal-cream/50 font-bold font-sans">First
+                                    Name</label>
+                                <input id="firstName" type="text"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-royal-cream focus:border-royal-gold transition-colors outline-none font-sans text-sm">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="lastName"
+                                    class="text-[10px] uppercase tracking-widest text-royal-cream/50 font-bold font-sans">Last
+                                    Name</label>
+                                <input id="lastName" type="text"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-royal-cream focus:border-royal-gold transition-colors outline-none font-sans text-sm">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email"
+                                class="text-[10px] uppercase tracking-widest text-royal-cream/50 font-bold font-sans">Email
+                                Address</label>
+                            <input id="email" type="email"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-royal-cream focus:border-royal-gold transition-colors outline-none font-sans text-sm">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="vision"
+                                class="text-[10px] uppercase tracking-widest text-royal-cream/50 font-bold font-sans">Vision
+                                for Majesty</label>
+                            <textarea id="vision" rows="4"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-royal-cream focus:border-royal-gold transition-colors outline-none font-sans text-sm"></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-royal-gold text-royal-dark py-5 rounded-xl font-sans text-[12px] uppercase tracking-widest font-bold hover:bg-royal-cream transition-all duration-500 shadow-xl shadow-royal-gold/10">
+                            Send Your Enquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-royal-dark relative border-t border-white/5">
+        <div
+            class="max-w-7xl mx-auto px-12 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-40 font-sans">
+            <div class="flex items-center gap-2">Since 1994</div>
+            <div class="flex gap-12 my-6 md:my-0">
+                <span>London</span>
+                <span>Paris</span>
+                <span>New York</span>
+            </div>
+            <div>© Dream Wedding International</div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
